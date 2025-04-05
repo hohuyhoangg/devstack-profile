@@ -157,7 +157,7 @@ const experiences = [
     date: "Dec 2022 - Present",
     points: [
       "Developing and maintaining data analytics system, platform using Java, Spring framework, Python, and Machine learning to analytics the satellite images, and other related technologies.",
-      "Construct the cloud infrastructure with code via HCL, Terraform, and AWS & Azure.",
+      "Construct the cloud infrastructure with code via HCL, Terraform, and AWS.",
       "Receive the business requirement, and implement the business logic, and provide the data analytics system to the customer.",
       "Collaborating with cross-functional teams including product managers, and other developers to create high-quality products.",
       "Participating in code reviews and providing constructive feedback to other developers.",
