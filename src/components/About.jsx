@@ -40,7 +40,7 @@ const About = () => {
     <>
       <motion.div
         variants={textVariant()}
-        className="mt-[300px] xs:mt-[30px] sm:mt-[10px] md:mt-[0]"
+        className="mt-[250px] xs:mt-[10px] sm:mt-[10px] md:mt-[0]"
       >
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
