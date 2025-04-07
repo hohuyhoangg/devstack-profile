@@ -32,6 +32,7 @@ import tripguide from "./tripguide.png";
 import kms from "./company/kms.png";
 import kibo from "./company/kibo.jpeg";
 import lni from "./company/lni.jpeg";
+import katalon from "./company/katalon.png";
 
 import java from "./tech/java.png";
 import postgresql from "./tech/postgresql.png";
@@ -42,6 +43,8 @@ import ghbass from "./ghbass.png";
 import lnirooftop from "./lni-rooftop.png";
 import hos from "./hos.png";
 import uc from "./uc.jpg";
+import truetest from "./truetest.png";
+import testops from "./testops.png";
 
 export {
   logo,
@@ -83,5 +86,8 @@ export {
   ghbass,
   lnirooftop,
   hos,
-  uc
+  uc,
+  katalon,
+  truetest,
+  testops,
 };

@@ -12,21 +12,14 @@ import {
   mongodb,
   git,
   docker,
-  carrent,
-  jobit,
-  tripguide,
-  kms,
-  kibo,
-  lni,
   java,
   postgresql,
   terraform,
   aws,
-  azure,
-  ghbass,
-  lnirooftop,
-  hos,
-  uc
+  uc,
+  katalon,
+  truetest,
+  testops,
 } from "../assets";
 
 export const navLinks = [
@@ -116,50 +109,32 @@ const technologies = [
     name: "aws",
     icon: aws,
   },
-  {
-    name: "azure",
-    icon: azure,
-  }
 ];
 
 const experiences = [
   {
-    title: "Backend Developer",
-    company_name: "KMS Technology, Inc.",
-    icon: kms,
+    title: "Full-Stack Software Engineer",
+    company_name: "TrueTest - Katalon, Inc.",
+    icon: katalon,
     iconBg: "#FFFFFF",
-    date: "March 2020 - Present",
+    date: "December 2022 - Present",
     points: [
-      "Joining outsourcing projects for developing and maintaining web applications using multiple technology Java, JavaScript and other related technologies.",
-      "Working with cloud service like AWS, Azure and familar with Docker and HCL.",
+      "Joining team for developing and maintaining web applications using multiple technology Java, JavaScript and other related technologies.",
+      "Working with cloud service like AWS and familar with Docker and K8S.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
   {
     title: "Fullstack Developer",
-    company_name: "Kibo Software, Inc.",
-    icon: kibo,
+    company_name: "TestOps - Katalon, Inc.",
+    icon: katalon,
     iconBg: "#FFFFFF",
-    date: "March 2020 - May 2023",
+    date: "May 2021 - December 2022",
     points: [
       "Developing and maintaining e-commerce platform using Java, Spring framework, Tiles, JavaScript and other related technologies.",
       "Managing and improve the site performance for sales session and customer service",
       "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Backed Developer & Devops",
-    company_name: "LexisNexis Risk Solutions",
-    icon: lni,
-    iconBg: "#FFFFFF",
-    date: "Dec 2022 - Present",
-    points: [
-      "Developing and maintaining data analytics system, platform using Java, Spring framework, Python, and Machine learning to analytics the satellite images, and other related technologies.",
-      "Construct the cloud infrastructure with code via HCL, Terraform, and AWS.",
-      "Receive the business requirement, and implement the business logic, and provide the data analytics system to the customer.",
-      "Collaborating with cross-functional teams including product managers, and other developers to create high-quality products.",
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
@@ -194,16 +169,16 @@ const testimonials = [
 
 const projects = [
   {
-    name: "KIBO ecommerce",
+    name: "TrueTest",
     description:
-      "E-commerce platfrom provide service for selling immediately and optimizing indefinitely. That provide the fast deployment with powerful out-of-the-box functionality; continuously refine your strategy with our expansive network of pre-built order management and ecommerce integrations",
+      "TrueTest is a groundbreaking approach to automated regression testing, driven by real user behavior rather than rigidly defined requirements. Integrated into the Katalon Platform, TrueTest harnesses the power of AI and application monitoring to map user journeys and generate automated tests to cover those journeys in your test environment before you release.",
     tags: [
       {
         name: "java",
         color: "blue-text-gradient",
       },
       {
-        name: "tiles",
+        name: "reactjs",
         color: "blue-text-gradient",
       },
       {
@@ -215,17 +190,17 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "aws",
         color: "pink-text-gradient",
       },
     ],
-    image: ghbass,
+    image: truetest,
     source_code_link: "#",
   },
   {
-    name: "Lexisnexis Insurance",
+    name: "TestOps",
     description:
-      "Solutions enable faster, more accurate quoting, more informed underwriting and friction-free claims resolution to help you elevate the customer experience while boosting profitability and increasing competitiveness.",
+      "TestOps takes care of all your execution infrastructure and scalability. Skip the deployment and maintenance steps to make more room for innovation.",
     tags: [
       {
         name: "java",
@@ -238,66 +213,17 @@ const projects = [
       {
         name: "restapi",
         color: "green-text-gradient",
-      },
-      {
-        name: "K8s",
-        color: "pink-text-gradient",
       },
       {
         name: "aws",
         color: "pink-text-gradient",
       },
       {
-        name: "azure",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "terraform",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Pytorch",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Machine Learning",
+        name: "kafka",
         color: "blue-text-gradient",
       }
     ],
-    image: lnirooftop,
-    source_code_link: "#",
-  },
-  {
-    name: "House of Supplements",
-    description:
-      "A comprehensive supplements booking platform that allows users to book supplements, and offers curated recommendations for popular supplements.",
-    tags: [
-      {
-        name: "nodejs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "golang",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "postgres",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "aws",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "terraform",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: hos,
+    image: testops,
     source_code_link: "#",
   },
   {
