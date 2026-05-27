@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import { menu, close } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -34,20 +33,26 @@ const Navbar = () => {
       }`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <Link
-          to="/"
+        <a
+          href="#top"
           className="flex items-center gap-2"
-          onClick={() => {
+          onClick={(event) => {
+            event.preventDefault();
             setActive("");
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
+          <span
+            aria-hidden="true"
+            className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#915EFF] text-sm font-black text-white ring-1 ring-white/20"
+          >
+            H
+          </span>
           <p className="text-white text-[18px] font-bold cursor-pointer flex ">
             Hoang Ho &nbsp;
             <span className="sm:block hidden"> | Full-Stack Software Engineer</span>
           </p>
-        </Link>
+        </a>
 
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((nav) => (
