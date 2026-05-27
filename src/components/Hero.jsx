@@ -19,15 +19,11 @@ const Hero = () => {
             Hi, I'm <span className="text-[#915EFF]">Hoang Ho</span>
           </h1>
           <h1 className={`${styles.heroHeadSubText} text-white`}>
-            I turn ideas into reality.
+            Senior Software Engineer | AI-Native Engineering
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I'm a Full Stack Software Engineer with strong problem-solving skills, specializing in creating
-            exceptional digital experiences. With expertise in both front-end and back-end development, I work with
-            a diverse range of technologies, including testing and traditional web applications. I enjoy solving challenging
-            projects that drive innovation and deliver high-quality results. My experience in leading development teams has
-            honed my ability to collaborate effectively and translate ideas into functional solutions. I am excited to contribute
-            to dynamic projects that push the boundaries of technology.
+            I build production-grade distributed systems across the full stack, with deep experience in backend
+            performance, event-driven architecture, AWS cloud infrastructure, and pragmatic AI-assisted delivery.
           </p>
         </div>
       </div>

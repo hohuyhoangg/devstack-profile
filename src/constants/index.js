@@ -28,8 +28,12 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "experience",
+    title: "Experience",
+  },
+  {
+    id: "projects",
+    title: "Projects",
   },
   {
     id: "contact",
@@ -39,19 +43,19 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
-    icon: web,
-  },
-  {
-    title: "Backend Developer",
+    title: "Distributed Systems",
     icon: backend,
   },
   {
-    title: "Cloud services",
+    title: "Cloud-Native AWS",
     icon: creator,
   },
   {
-    title: "React Native Developer",
+    title: "Full-Stack Products",
+    icon: web,
+  },
+  {
+    title: "Technical Leadership",
     icon: mobile,
   },
 ];
@@ -113,29 +117,56 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Full-Stack Software Engineer",
-    company_name: "TrueTest - Katalon, Inc.",
+    title: "Senior Software Engineer",
+    company_name: "True Production Insights - Katalon, Inc.",
     icon: katalon,
     iconBg: "#FFFFFF",
-    date: "December 2022 - Present",
+    date: "Dec 2022 - Present",
     points: [
-      "Joining team for developing and maintaining web applications using multiple technology Java, JavaScript and other related technologies.",
-      "Working with cloud service like AWS and familar with Docker and K8S.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Reduced P95 latency from 2s to 500ms by co-developing a gRPC-based SDK for permission checks, replacing inefficient legacy API calls.",
+      "Re-engineered the streaming architecture to move POC processing from 20 minutes to near real-time and accelerate customer time-to-value.",
+      "Led end-to-end development of real-time session replay using rrweb, pako compression, and AWS Kinesis for scalable event ingestion.",
+      "Designed a reusable assertion framework and real-time user action tracking agent to feed AI-driven test generation workflows.",
+      "Served as Scrum Master, led code reviews, mentored engineers, and diagnosed complex production issues through root cause analysis.",
     ],
   },
   {
-    title: "Fullstack Developer",
+    title: "Freelance Team Lead - Software Engineer",
+    company_name: "Unified Computing",
+    icon: uc,
+    iconBg: "#FFFFFF",
+    date: "May 2023 - Mar 2025",
+    points: [
+      "Led a remote team of 5 engineers, owning project lifecycles, effort estimation, and end-to-end delivery of a multi-tenant low-code platform.",
+      "Designed and built serverless backends using Node.js, AWS Lambda, DynamoDB, and S3 with a focus on cost efficiency and high availability.",
+      "Automated multi-account AWS deployments with Terraform to standardize runtime provisioning across environments.",
+      "Owned release management and established engineering standards through code reviews, security practices, and delivery governance.",
+    ],
+  },
+  {
+    title: "Freelance Team Lead - Software Engineer",
+    company_name: "Z-Company",
+    icon: creator,
+    iconBg: "#FFFFFF",
+    date: "Dec 2022 - May 2023",
+    points: [
+      "Led a high-seniority team of 6 engineers across international enterprise and startup engagements.",
+      "Acted as the primary technical contact for clients, translating business goals into scoped technical solutions.",
+      "Managed project delivery from effort estimation and task decomposition through implementation and final handoff.",
+      "Provided hands-on code reviews and technical guidance for complex engineering challenges.",
+    ],
+  },
+  {
+    title: "Software Engineer I",
     company_name: "TestOps - Katalon, Inc.",
     icon: katalon,
     iconBg: "#FFFFFF",
-    date: "May 2021 - December 2022",
+    date: "May 2021 - Dec 2022",
     points: [
-      "Developing and maintaining e-commerce platform using Java, Spring framework, Tiles, JavaScript and other related technologies.",
-      "Managing and improve the site performance for sales session and customer service",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Contributed to a cloud-native visual regression engine on AWS Lambda and AWS MSK to process and compare UI screenshots at scale.",
+      "Built data processing pipelines to ingest test execution logs and automatically categorize failure results for faster QA debugging.",
+      "Improved throughput of test result processing by applying multithreading and concurrency patterns across the core codebase.",
+      "Developed and maintained backend services with Java, Spring, PostgreSQL, Kafka, and AWS infrastructure.",
     ],
   },
 ];
@@ -169,9 +200,9 @@ const testimonials = [
 
 const projects = [
   {
-    name: "TrueTest",
+    name: "True Production Insights",
     description:
-      "TrueTest is a groundbreaking approach to automated regression testing, driven by real user behavior rather than rigidly defined requirements. Integrated into the Katalon Platform, TrueTest harnesses the power of AI and application monitoring to map user journeys and generate automated tests to cover those journeys in your test environment before you release.",
+      "AI-powered product analytics and test generation platform that captures real user journeys, streams production behavior, and generates maintainable automated tests. I worked on latency optimization, real-time replay, event ingestion, assertion generation, and AWS EKS infrastructure.",
     tags: [
       {
         name: "java",
@@ -186,7 +217,11 @@ const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "grpc",
+        color: "green-text-gradient",
+      },
+      {
+        name: "kinesis",
         color: "green-text-gradient",
       },
       {
@@ -195,12 +230,12 @@ const projects = [
       },
     ],
     image: truetest,
-    source_code_link: "#",
+    source_code_link: "",
   },
   {
     name: "TestOps",
     description:
-      "TestOps takes care of all your execution infrastructure and scalability. Skip the deployment and maintenance steps to make more room for innovation.",
+      "AI-driven test orchestration platform for large-scale execution analytics, visual testing, and automated root cause analysis. I contributed to visual regression processing on AWS Lambda/MSK and log pipelines that categorized failures to reduce debugging time.",
     tags: [
       {
         name: "java",
@@ -211,7 +246,7 @@ const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "spring",
         color: "green-text-gradient",
       },
       {
@@ -221,15 +256,15 @@ const projects = [
       {
         name: "kafka",
         color: "blue-text-gradient",
-      }
+      },
     ],
     image: testops,
-    source_code_link: "#",
+    source_code_link: "",
   },
   {
     name: "Unified React",
     description:
-      "A platform to build and deploy React application with no code. It provides a simple and intuitive interface for developers to create and manage React applications.",
+      "Multi-tenant low-code app builder that lets multiple frontend projects run on a unified serverless runtime. I led a remote engineering team, designed Node.js and AWS Lambda services, automated Terraform deployments, and owned release delivery.",
     tags: [
       {
         name: "nodejs",
@@ -240,11 +275,11 @@ const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "postgres",
+        name: "lambda",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "dynamodb",
         color: "pink-text-gradient",
       },
       {
@@ -257,7 +292,7 @@ const projects = [
       },
     ],
     image: uc,
-    source_code_link: "#",
+    source_code_link: "",
   },
 ];
 

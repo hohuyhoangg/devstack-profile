@@ -1,0 +1,133 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - navigation [ref=e5]:
+      - generic [ref=e6]:
+        - link "logo Hoang Ho | Full-Stack Software Engineer" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img "logo" [ref=e8]
+          - paragraph [ref=e9]:
+            - text: Hoang Ho
+            - generic [ref=e10]: "| Full-Stack Software Engineer"
+        - list [ref=e11]:
+          - listitem [ref=e12] [cursor=pointer]:
+            - link "About" [ref=e13]:
+              - /url: "#about"
+          - listitem [ref=e14] [cursor=pointer]:
+            - link "Experience" [ref=e15]:
+              - /url: "#experience"
+          - listitem [ref=e16] [cursor=pointer]:
+            - link "Projects" [ref=e17]:
+              - /url: "#projects"
+          - listitem [ref=e18] [cursor=pointer]:
+            - link "Contact" [ref=e19]:
+              - /url: "#contact"
+    - generic [ref=e25]:
+      - heading "Hi, I'm Hoang Ho" [level=1] [ref=e26]
+      - heading "Senior Software Engineer | AI-Native Engineering" [level=1] [ref=e222]
+      - paragraph [ref=e28]: I build production-grade distributed systems across the full stack, with deep experience in backend performance, event-driven architecture, AWS cloud infrastructure, and pragmatic AI-assisted delivery.
+  - generic [ref=e29]:
+    - generic [ref=e31]:
+      - paragraph [ref=e32]: Introduction
+      - heading "Overview." [level=2] [ref=e33]
+    - paragraph [ref=e34]: I'm a Senior Software Engineer with 6+ years of experience designing cloud-native systems, optimizing high-throughput backend services, and delivering full-stack products from architecture to production. My work spans Java, Python, JavaScript/TypeScript, Quarkus, Spring, Node.js, React, PostgreSQL, Kafka, AWS EKS, Lambda, Kinesis, Terraform, and CI/CD. I also lead teams, mentor engineers, run code reviews, and use AI-assisted workflows to move faster without lowering engineering quality.
+    - generic [ref=e35]:
+      - generic [ref=e225]:
+        - img "web-development" [ref=e226]
+        - heading "Distributed Systems" [level=3] [ref=e227]
+      - generic [ref=e230]:
+        - img "web-development" [ref=e231]
+        - heading "Cloud-Native AWS" [level=3] [ref=e232]
+      - generic [ref=e235]:
+        - img "web-development" [ref=e236]
+        - heading "Full-Stack Products" [level=3] [ref=e237]
+      - generic [ref=e240]:
+        - img "web-development" [ref=e241]
+        - heading "Technical Leadership" [level=3] [ref=e242]
+  - generic [ref=e56]:
+    - generic [ref=e58]:
+      - paragraph [ref=e59]: What I have done so far
+      - heading "Work Experience." [level=2] [ref=e60]
+    - generic [ref=e62]:
+      - generic [ref=e63]:
+        - img "True Production Insights - Katalon, Inc." [ref=e243]
+        - generic [ref=e197]:
+          - generic [ref=e199]:
+            - heading "Senior Software Engineer" [level=3] [ref=e244]
+            - paragraph [ref=e201]: True Production Insights - Katalon, Inc.
+          - list [ref=e202]:
+            - listitem [ref=e203]: Reduced P95 latency from 2s to 500ms by co-developing a gRPC-based SDK for permission checks, replacing inefficient legacy API calls.
+            - listitem [ref=e204]: Re-engineered the streaming architecture to move POC processing from 20 minutes to near real-time and accelerate customer time-to-value.
+            - listitem [ref=e205]: Led end-to-end development of real-time session replay using rrweb, pako compression, and AWS Kinesis for scalable event ingestion.
+            - listitem [ref=e206]: Designed a reusable assertion framework and real-time user action tracking agent to feed AI-driven test generation workflows.
+            - listitem [ref=e245]: Served as Scrum Master, led code reviews, mentored engineers, and diagnosed complex production issues through root cause analysis.
+          - generic [ref=e207]: Dec 2022 - Present
+      - generic [ref=e64]:
+        - img "Unified Computing" [ref=e246]
+        - generic [ref=e211]:
+          - generic [ref=e213]:
+            - heading "Freelance Team Lead - Software Engineer" [level=3] [ref=e247]
+            - paragraph [ref=e215]: Unified Computing
+          - list [ref=e216]:
+            - listitem [ref=e217]: Led a remote team of 5 engineers, owning project lifecycles, effort estimation, and end-to-end delivery of a multi-tenant low-code platform.
+            - listitem [ref=e218]: Designed and built serverless backends using Node.js, AWS Lambda, DynamoDB, and S3 with a focus on cost efficiency and high availability.
+            - listitem [ref=e219]: Automated multi-account AWS deployments with Terraform to standardize runtime provisioning across environments.
+            - listitem [ref=e220]: Owned release management and established engineering standards through code reviews, security practices, and delivery governance.
+          - generic [ref=e221]: May 2023 - Mar 2025
+  - generic [ref=e120]:
+    - generic [ref=e122]:
+      - paragraph [ref=e123]: My work
+      - heading "Projects." [level=2] [ref=e124]
+    - paragraph [ref=e126]: Following projects showcases my skills and experience through real-world examples of my work. Each project is briefly described with links to code repositories and live demos in it. It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively.
+    - generic [ref=e127]:
+      - generic [ref=e129]:
+        - img "True Production Insights" [ref=e250]
+        - generic [ref=e132]:
+          - heading "True Production Insights" [level=3] [ref=e251]
+          - paragraph [ref=e134]: AI-powered product analytics and test generation platform that captures real user journeys, streams production behavior, and generates maintainable automated tests. I worked on latency optimization, real-time replay, event ingestion, assertion generation, and AWS EKS infrastructure.
+        - generic [ref=e135]:
+          - paragraph [ref=e136]: "#java"
+          - paragraph [ref=e137]: "#reactjs"
+          - paragraph [ref=e138]: "#postgres"
+          - paragraph [ref=e252]: "#grpc"
+          - paragraph [ref=e253]: "#kinesis"
+          - paragraph [ref=e140]: "#aws"
+      - generic [ref=e142]:
+        - img "TestOps" [ref=e144]
+        - generic [ref=e145]:
+          - heading "TestOps" [level=3] [ref=e146]
+          - paragraph [ref=e147]: AI-driven test orchestration platform for large-scale execution analytics, visual testing, and automated root cause analysis. I contributed to visual regression processing on AWS Lambda/MSK and log pipelines that categorized failures to reduce debugging time.
+        - generic [ref=e148]:
+          - paragraph [ref=e149]: "#java"
+          - paragraph [ref=e150]: "#postgres"
+          - paragraph [ref=e254]: "#spring"
+          - paragraph [ref=e152]: "#aws"
+          - paragraph [ref=e153]: "#kafka"
+      - generic [ref=e155]:
+        - img "Unified React" [ref=e157]
+        - generic [ref=e158]:
+          - heading "Unified React" [level=3] [ref=e159]
+          - paragraph [ref=e160]: Multi-tenant low-code app builder that lets multiple frontend projects run on a unified serverless runtime. I led a remote engineering team, designed Node.js and AWS Lambda services, automated Terraform deployments, and owned release delivery.
+        - generic [ref=e161]:
+          - paragraph [ref=e162]: "#nodejs"
+          - paragraph [ref=e163]: "#react"
+          - paragraph [ref=e255]: "#lambda"
+          - paragraph [ref=e256]: "#dynamodb"
+          - paragraph [ref=e166]: "#aws"
+          - paragraph [ref=e167]: "#terraform"
+  - generic [ref=e172]:
+    - paragraph [ref=e173]: Get in touch
+    - heading "Contact." [level=3] [ref=e174]
+    - generic [ref=e175]:
+      - generic [ref=e176]:
+        - generic [ref=e177]: Your Name
+        - textbox "Your Name" [ref=e178]:
+          - /placeholder: What's your name?
+      - generic [ref=e179]:
+        - generic [ref=e180]: Your email
+        - textbox "Your email" [ref=e181]:
+          - /placeholder: What's your email?
+      - generic [ref=e182]:
+        - generic [ref=e183]: Your Message
+        - textbox "Your Message" [ref=e184]:
+          - /placeholder: What do you want to say?
+      - button "Send" [ref=e185] [cursor=pointer]
