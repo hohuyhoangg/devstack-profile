@@ -1,12 +1,7 @@
 import {
-  mobile,
-  backend,
-  creator,
-  web,
   javascript,
   typescript,
   reactjs,
-  redux,
   tailwind,
   nodejs,
   mongodb,
@@ -24,11 +19,7 @@ import {
 
 export const navLinks = [
   {
-    id: "about",
-    title: "About",
-  },
-  {
-    id: "experience",
+    id: "work",
     title: "Experience",
   },
   {
@@ -36,27 +27,8 @@ export const navLinks = [
     title: "Projects",
   },
   {
-    id: "contact",
-    title: "Contact",
-  },
-];
-
-const services = [
-  {
-    title: "Distributed Systems",
-    icon: backend,
-  },
-  {
-    title: "Cloud-Native AWS",
-    icon: creator,
-  },
-  {
-    title: "Full-Stack Products",
-    icon: web,
-  },
-  {
-    title: "Technical Leadership",
-    icon: mobile,
+    id: "edu",
+    title: "Education",
   },
 ];
 
@@ -77,10 +49,7 @@ const technologies = [
     name: "React JS",
     icon: reactjs,
   },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
+
   {
     name: "Tailwind CSS",
     icon: tailwind,
@@ -119,8 +88,6 @@ const experiences = [
   {
     title: "Senior Software Engineer",
     company_name: "True Production Insights - Katalon, Inc.",
-    icon: katalon,
-    iconBg: "#FFFFFF",
     date: "Dec 2022 - Present",
     points: [
       "Reduced P95 latency from 2s to 500ms by co-developing a gRPC-based SDK for permission checks, replacing inefficient legacy API calls.",
@@ -133,8 +100,6 @@ const experiences = [
   {
     title: "Freelance Team Lead - Software Engineer",
     company_name: "Unified Computing",
-    icon: uc,
-    iconBg: "#FFFFFF",
     date: "May 2023 - Mar 2025",
     points: [
       "Led a remote team of 5 engineers, owning project lifecycles, effort estimation, and end-to-end delivery of a multi-tenant low-code platform.",
@@ -146,8 +111,6 @@ const experiences = [
   {
     title: "Freelance Team Lead - Software Engineer",
     company_name: "Z-Company",
-    icon: creator,
-    iconBg: "#FFFFFF",
     date: "Dec 2022 - May 2023",
     points: [
       "Led a high-seniority team of 6 engineers across international enterprise and startup engagements.",
@@ -159,8 +122,6 @@ const experiences = [
   {
     title: "Software Engineer I",
     company_name: "TestOps - Katalon, Inc.",
-    icon: katalon,
-    iconBg: "#FFFFFF",
     date: "May 2021 - Dec 2022",
     points: [
       "Contributed to a cloud-native visual regression engine on AWS Lambda and AWS MSK to process and compare UI screenshots at scale.",
@@ -168,33 +129,6 @@ const experiences = [
       "Improved throughput of test result processing by applying multithreading and concurrency patterns across the core codebase.",
       "Developed and maintained backend services with Java, Spring, PostgreSQL, Kafka, and AWS infrastructure.",
     ],
-  },
-];
-
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
 
@@ -296,4 +230,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { technologies, experiences, projects };

@@ -1,105 +1,173 @@
-import React, { useEffect, useState } from "react";
-
-import { styles } from "../styles";
+import { useState } from "react";
 import { navLinks } from "../constants";
-import { menu, close } from "../assets";
 
 const Navbar = () => {
-  const [active, setActive] = useState("");
-  const [toggle, setToggle] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      if (scrollTop > 100) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav
-      className={`${
-        styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 ${
-        scrolled ? "bg-primary" : "bg-transparent"
-      }`}
+      style={{
+        position: "sticky",
+        top: 0,
+        zIndex: 50,
+        height: 68,
+        background: "rgba(255,255,255,0.86)",
+        backdropFilter: "blur(10px)",
+        WebkitBackdropFilter: "blur(10px)",
+        borderBottom: "1px solid #ececee",
+      }}
+      className="w-full flex items-center"
     >
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+      <div
+        style={{ maxWidth: 1040, margin: "0 auto", padding: "0 28px" }}
+        className="w-full flex items-center justify-between"
+      >
+        {/* Logo + Name */}
         <a
-          href="#top"
-          className="flex items-center gap-2"
-          onClick={(event) => {
-            event.preventDefault();
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
+          href="#"
+          onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+          className="flex items-center gap-2.5 no-underline"
+          style={{ textDecoration: "none" }}
         >
           <span
-            aria-hidden="true"
-            className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#915EFF] text-sm font-black text-white ring-1 ring-white/20"
+            style={{
+              width: 30,
+              height: 30,
+              borderRadius: 7,
+              background: "#111113",
+              display: "grid",
+              placeItems: "center",
+              fontFamily: "Space Grotesk, sans-serif",
+              fontWeight: 700,
+              fontSize: 13,
+              color: "#fff",
+              flexShrink: 0,
+            }}
           >
-            H
+            HH
           </span>
-          <p className="text-white text-[18px] font-bold cursor-pointer flex ">
-            Hoang Ho &nbsp;
-            <span className="sm:block hidden"> | Full-Stack Software Engineer</span>
-          </p>
+          <span
+            style={{
+              fontFamily: "Space Grotesk, sans-serif",
+              fontWeight: 600,
+              fontSize: 15,
+              color: "#0f0f10",
+            }}
+          >
+            Ho Huy Hoang
+          </span>
         </a>
 
-        <ul className="list-none hidden sm:flex flex-row gap-10">
-          {navLinks.map((nav) => (
-            <li
-              key={nav.id}
-              className={`${
-                active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
-            >
-              <a href={`#${nav.id}`}>{nav.title}</a>
-            </li>
-          ))}
-        </ul>
-
-        <div className="sm:hidden flex flex-1 justify-end items-center">
-          <img
-            src={toggle ? close : menu}
-            alt="menu"
-            className="w-[28px] h-[28px] object-contain"
-            onClick={() => setToggle(!toggle)}
-          />
-
-          <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+        {/* Desktop nav */}
+        <div className="hidden sm:flex items-center gap-6">
+          <ul className="list-none flex items-center gap-6">
+            {navLinks.map((nav) => (
+              <li key={nav.id}>
+                <a
+                  href={`#${nav.id}`}
+                  style={{
+                    fontFamily: "IBM Plex Mono, monospace",
+                    fontSize: 11.5,
+                    textTransform: "uppercase",
+                    letterSpacing: "0.6px",
+                    color: "#6a6b70",
+                    textDecoration: "none",
+                    transition: "color 150ms",
+                  }}
+                  onMouseEnter={(e) => (e.target.style.color = "#0f0f10")}
+                  onMouseLeave={(e) => (e.target.style.color = "#6a6b70")}
+                >
+                  {nav.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <a
+            href="#contact"
+            style={{
+              fontFamily: "IBM Plex Mono, monospace",
+              fontSize: 11.5,
+              textTransform: "uppercase",
+              letterSpacing: "0.6px",
+              background: "#111113",
+              color: "#fff",
+              borderRadius: 8,
+              padding: "9px 16px",
+              textDecoration: "none",
+              transition: "opacity 150ms",
+            }}
+            onMouseEnter={(e) => (e.target.style.opacity = "0.85")}
+            onMouseLeave={(e) => (e.target.style.opacity = "1")}
           >
-            <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
-              {navLinks.map((nav) => (
-                <li
-                  key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
-                  }`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(nav.title);
+            Contact
+          </a>
+        </div>
+
+        {/* Mobile hamburger */}
+        <button
+          className="sm:hidden flex flex-col gap-1.5 p-1"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+          style={{ background: "none", border: "none", cursor: "pointer" }}
+        >
+          <span style={{ display: "block", width: 22, height: 2, background: "#111113", borderRadius: 2 }} />
+          <span style={{ display: "block", width: 22, height: 2, background: "#111113", borderRadius: 2 }} />
+          <span style={{ display: "block", width: 22, height: 2, background: "#111113", borderRadius: 2 }} />
+        </button>
+      </div>
+
+      {/* Mobile menu */}
+      {menuOpen && (
+        <div
+          style={{
+            position: "absolute",
+            top: 68,
+            left: 0,
+            right: 0,
+            background: "#fff",
+            borderBottom: "1px solid #ececee",
+            padding: "16px 28px",
+          }}
+          className="sm:hidden"
+        >
+          <ul className="list-none flex flex-col gap-4">
+            {navLinks.map((nav) => (
+              <li key={nav.id}>
+                <a
+                  href={`#${nav.id}`}
+                  onClick={() => setMenuOpen(false)}
+                  style={{
+                    fontFamily: "IBM Plex Mono, monospace",
+                    fontSize: 12,
+                    textTransform: "uppercase",
+                    letterSpacing: "0.6px",
+                    color: "#6a6b70",
+                    textDecoration: "none",
                   }}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
+                  {nav.title}
+                </a>
+              </li>
+            ))}
+            <li>
+              <a
+                href="#contact"
+                onClick={() => setMenuOpen(false)}
+                style={{
+                  fontFamily: "IBM Plex Mono, monospace",
+                  fontSize: 12,
+                  textTransform: "uppercase",
+                  letterSpacing: "0.6px",
+                  color: "#6a6b70",
+                  textDecoration: "none",
+                }}
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
         </div>
-      </div>
+      )}
     </nav>
   );
 };

@@ -4,16 +4,27 @@ module.exports = {
   mode: "jit",
   theme: {
     extend: {
-      colors: {
-        primary: "#050816",
-        secondary: "#aaa6c3",
-        tertiary: "#151030",
-        "black-100": "#100d25",
-        "black-200": "#090325",
-        "white-100": "#f3f3f3",
+      fontFamily: {
+        display: ["Space Grotesk", "sans-serif"],
+        mono: ["IBM Plex Mono", "monospace"],
+        body: ["IBM Plex Sans", "sans-serif"],
       },
-      boxShadow: {
-        card: "0px 35px 120px -15px #211e35",
+      colors: {
+        ink: "#0f0f10",
+        "ink-soft": "#2c2d31",
+        muted: "#6a6b70",
+        faint: "#9a9b9f",
+        hairline: "#ececee",
+        "chip-fill": "#f4f4f5",
+        wash: "#fafafa",
+        dark: "#111113",
+        "dark-tile": "#16161a",
+        "dark-sep": "#2a2b2e",
+        "dark-btn": "#2f3033",
+        accent: "#1f8a5b",
+        "dark-text": "#d6d7da",
+        "dark-muted": "#9a9b9f",
+        "dark-dim": "#6a6b70",
       },
       screens: {
         xs: "450px",

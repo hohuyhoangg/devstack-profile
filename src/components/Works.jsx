@@ -1,94 +1,162 @@
-import { styles } from "../styles";
-import { github } from "../assets";
-import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
-import TiltCard from "./TiltCard";
 
-const ProjectCard = ({
-  index,
-  name,
-  description,
-  tags,
-  image,
-  source_code_link,
-}) => {
-  const hasSourceCodeLink = Boolean(
-    source_code_link && source_code_link !== "#"
-  );
-
-  return (
-    <div>
-      <TiltCard
-        max={45}
-        speed={450}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[300px] w-full"
-      >
-        <div className="relative w-full h-[230px]">
-          <img
-            src={image}
-            alt={name}
-            className="w-full h-full object-cover rounded-2xl"
-          />
-          {hasSourceCodeLink && (
-            <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-              <button
-                type="button"
-                onClick={() =>
-                  window.open(source_code_link, "_blank", "noopener,noreferrer")
-                }
-                aria-label={`Open ${name} source code`}
-                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-              >
-                <img
-                  src={github}
-                  alt=""
-                  className="w-1/2 h-1/2 object-contain"
-                />
-              </button>
-            </div>
-          )}
-        </div>
-        <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
-        </div>
-        <div className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag) => (
-            <p key={tag.name} className={`text-[14px] ${tag.color}`}>
-              #{tag.name}
-            </p>
-          ))}
-        </div>
-      </TiltCard>
-    </div>
-  );
+const featuredProject = {
+  eyebrow: "Multi-Agent AI · 2026",
+  title: "Time-Travel Debugger",
+  description:
+    "An AI-powered debugging platform that records distributed system state across time, enabling engineers to replay any past execution, pinpoint root causes, and generate fix suggestions via multi-agent reasoning.",
+  bullets: [
+    "Captures distributed traces and state snapshots via an instrumented Spring Boot SDK",
+    "LangGraph multi-agent pipeline correlates anomalies, proposes hypotheses, and generates remediation patches",
+    "Real-time replay UI built in React 18 with Grafana-embedded dashboards for timeline visualization",
+  ],
+  chips: ["Spring Boot", "FastAPI", "LangGraph", "Claude", "React 18", "Grafana"],
 };
+
+const mono = { fontFamily: "IBM Plex Mono, monospace" };
+const display = { fontFamily: "Space Grotesk, sans-serif" };
+const body = { fontFamily: "IBM Plex Sans, sans-serif" };
 
 const Works = () => {
   return (
-    <>
-      <div>
-        <p className={styles.sectionSubText}>My work</p>
-        <h2 className={styles.sectionHeadText}>Projects.</h2>
-      </div>
+    <section
+      id="projects"
+      style={{
+        background: "#fafafa",
+        borderTop: "1px solid #ececee",
+        borderBottom: "1px solid #ececee",
+        paddingTop: 80,
+        paddingBottom: 80,
+      }}
+    >
+      <div style={{ maxWidth: 1040, margin: "0 auto", padding: "0 28px" }}>
 
-      <div className="w-full flex">
-        <p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
-          Following projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
+        {/* Section header */}
+        <p style={{ ...mono, fontSize: 11, textTransform: "uppercase", letterSpacing: "1.2px", color: "#6a6b70", marginBottom: 10 }}>
+          03
         </p>
+        <h2 style={{ ...display, fontWeight: 600, fontSize: 28, color: "#0f0f10", marginBottom: 32, letterSpacing: "-0.5px" }}>
+          Featured project
+        </h2>
+
+        {/* Featured card */}
+        <div
+          style={{
+            background: "#fff",
+            border: "1px solid #ececee",
+            borderRadius: 16,
+            padding: "38px 36px",
+            marginBottom: 56,
+          }}
+        >
+          <p style={{ ...mono, fontSize: 11, color: "#1f8a5b", textTransform: "uppercase", letterSpacing: "1px", marginBottom: 10 }}>
+            {featuredProject.eyebrow}
+          </p>
+          <h3 style={{ ...display, fontWeight: 700, fontSize: 24, color: "#0f0f10", marginBottom: 12 }}>
+            {featuredProject.title}
+          </h3>
+          <p style={{ ...body, fontSize: 15, color: "#45464a", lineHeight: 1.62, marginBottom: 16, maxWidth: 600 }}>
+            {featuredProject.description}
+          </p>
+          <ul style={{ paddingLeft: 18, marginBottom: 20 }}>
+            {featuredProject.bullets.map((b, i) => (
+              <li key={i} style={{ ...body, fontSize: 14, color: "#45464a", lineHeight: 1.6, marginBottom: 6 }}>
+                {b}
+              </li>
+            ))}
+          </ul>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+            {featuredProject.chips.map((chip) => (
+              <span
+                key={chip}
+                style={{ ...mono, fontSize: 11, background: "#f4f4f5", borderRadius: 6, padding: "4px 9px", color: "#45464a" }}
+              >
+                {chip}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Products grid label */}
+        <p style={{ ...mono, fontSize: 11, textTransform: "uppercase", letterSpacing: "1.2px", color: "#6a6b70", marginBottom: 20 }}>
+          Products I have worked on
+        </p>
+
+        {/* 3-col grid */}
+        <div
+          style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 22 }}
+          className="projects-grid"
+        >
+          {projects.map((project, i) => (
+            <div
+              key={i}
+              style={{
+                background: "#fff",
+                border: "1px solid #ececee",
+                borderRadius: 14,
+                overflow: "hidden",
+              }}
+            >
+              {/* Image */}
+              {project.image && (
+                <div
+                  style={{
+                    height: 168,
+                    background: i === 0 ? "#f2f2f3" : "#fff",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    overflow: "hidden",
+                  }}
+                >
+                  <img
+                    src={project.image}
+                    alt={project.name}
+                    loading="lazy"
+                    width={i === 0 ? 400 : 200}
+                    height={168}
+                    style={
+                      i === 0
+                        ? { width: "100%", height: "100%", objectFit: "cover" }
+                        : { maxWidth: "80%", maxHeight: "80%", objectFit: "contain" }
+                    }
+                  />
+                </div>
+              )}
+              {/* Content */}
+              <div style={{ padding: "18px 20px 20px" }}>
+                <h3 style={{ ...display, fontWeight: 600, fontSize: 17, color: "#0f0f10", marginBottom: 8 }}>
+                  {project.name}
+                </h3>
+                <p style={{ ...body, fontSize: 13.5, color: "#6a6b70", lineHeight: 1.55, marginBottom: 12 }}>
+                  {project.description}
+                </p>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag.name}
+                      style={{ ...mono, fontSize: 10, background: "#f4f4f5", borderRadius: 6, padding: "3px 8px", color: "#6a6b70" }}
+                    >
+                      {tag.name}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
       </div>
 
-      <div className="mt-20 flex flex-wrap gap-7">
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))}
-      </div>
-    </>
+      <style>{`
+        @media (max-width: 720px) {
+          .projects-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
+    </section>
   );
 };
 
-export default SectionWrapper(Works, "projects");
+export default Works;
