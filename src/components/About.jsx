@@ -7,7 +7,7 @@ const strengths = [
   {
     num: "/01",
     title: "Distributed Systems",
-    desc: "Production-grade, event-driven distributed systems.",
+    desc: "High-throughput, event-driven architectures built for production scale.",
   },
   {
     num: "/02",
@@ -95,7 +95,7 @@ const About = () => {
 
         {/* Tech stack */}
         <p style={{ ...mono, fontSize: 11, textTransform: "uppercase", letterSpacing: "1.2px", color: "#6a6b70", marginBottom: 16 }}>
-          Tech stack
+          Tech stacks
         </p>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 48 }}>
           {techStack.map((tech) => (

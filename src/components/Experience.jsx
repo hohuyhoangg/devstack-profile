@@ -25,7 +25,7 @@ const expMeta = [
     date: "DEC 2022 — MAY 2023",
     location: "Remote",
     teamSize: null,
-    description: "Consulting engagements across international enterprise and startup clients, delivering technical leadership and end-to-end software solutions.",
+    description: "A freelance consulting practice serving international enterprise and startup clients, delivering technical leadership and end-to-end software solutions.",
     chips: ["Node.js", "AWS", "PostgreSQL"],
     logo: null,
   },

@@ -79,7 +79,7 @@ const Works = () => {
 
         {/* Products grid label */}
         <p style={{ ...mono, fontSize: 11, textTransform: "uppercase", letterSpacing: "1.2px", color: "#6a6b70", marginBottom: 20 }}>
-          Products I have worked on
+          Products I've worked on
         </p>
 
         {/* 3-col grid */}
