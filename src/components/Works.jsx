@@ -55,13 +55,14 @@ const Works = () => {
           <h3 style={{ ...display, fontWeight: 700, fontSize: 24, color: "#0f0f10", marginBottom: 12 }}>
             {featuredProject.title}
           </h3>
-          <p style={{ ...body, fontSize: 15, color: "#45464a", lineHeight: 1.62, marginBottom: 16, maxWidth: 600 }}>
+          <p style={{ ...body, fontSize: 15, color: "#45464a", lineHeight: 1.62, marginBottom: 16 }}>
             {featuredProject.description}
           </p>
-          <ul style={{ paddingLeft: 18, marginBottom: 20 }}>
+          <ul style={{ paddingLeft: 0, listStyle: "none", marginBottom: 20 }}>
             {featuredProject.bullets.map((b, i) => (
-              <li key={i} style={{ ...body, fontSize: 14, color: "#45464a", lineHeight: 1.6, marginBottom: 6 }}>
-                {b}
+              <li key={i} style={{ ...body, fontSize: 14, color: "#45464a", lineHeight: 1.6, marginBottom: 6, display: "flex", gap: 8 }}>
+                <span style={{ color: "#6a6b70", flexShrink: 0, marginTop: "1px", fontSize: 16, lineHeight: 1 }}>•</span>
+                <span>{b}</span>
               </li>
             ))}
           </ul>
